@@ -15,10 +15,7 @@ class CheckLinksTest(unittest.TestCase):
         if cls.BROWSER == "Chrome":
             cls.driver = webdriver.Chrome(executable_path='../driver/chromedriver')
         elif cls.BROWSER == "PhantomJS":
-            try:
-                cls.driver = webdriver.PhantomJS()
-            except Exception as e:
-                cls.driver = webdriver.PhantomJS('../driver/phantomjs')
+            cls.driver = webdriver.PhantomJS()
         elif cls.BROWSER == "Firefox":
             cls.driver = webdriver.Firefox(executable_path='../driver/geckodriver')
         elif cls.BROWSER == "Opera":
